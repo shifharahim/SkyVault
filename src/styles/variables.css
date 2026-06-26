@@ -1,0 +1,51 @@
+:root{
+
+/* Primary Colors */
+
+--primary:#4F46E5;
+--secondary:#7C3AED;
+--accent:#06B6D4;
+
+/* Background */
+
+--background:#F8FAFC;
+--surface:#FFFFFF;
+
+/* Sidebar */
+
+--sidebar:#111827;
+
+/* Text */
+
+--text:#1F2937;
+--text-light:#6B7280;
+
+/* Border */
+
+--border:#E5E7EB;
+
+/* Success */
+
+--success:#22C55E;
+
+/* Danger */
+
+--danger:#EF4444;
+
+/* Warning */
+
+--warning:#FACC15;
+
+/* Shadow */
+
+--shadow:0 12px 30px rgba(0,0,0,.08);
+
+/* Radius */
+
+--radius:20px;
+
+/* Transition */
+
+--transition:.3s ease;
+
+}
