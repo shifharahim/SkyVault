@@ -1,0 +1,44 @@
+.btn{
+padding:15px 35px;
+border:none;
+border-radius:50px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+font-family:"Inter",sans-serif;
+}
+
+.primary{
+
+background:linear-gradient(135deg,#4F46E5,#7C3AED);
+
+color:white;
+
+}
+
+.primary:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 30px rgba(79,70,229,.3);
+
+}
+
+.secondary{
+
+background:white;
+
+border:2px solid #4F46E5;
+
+color:#4F46E5;
+
+}
+
+.secondary:hover{
+
+background:#4F46E5;
+
+color:white;
+
+}
