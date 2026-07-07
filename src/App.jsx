@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import Welcome from "./pages/Welcome/Welcome";
+import Login from "./pages/Login/Login";
 
 function PlaceholderPage({ title }) {
   return (
@@ -29,12 +30,8 @@ function PlaceholderPage({ title }) {
           {title}
         </h1>
 
-        <p
-          style={{
-            color: "#64748b",
-          }}
-        >
-          This page will be built in the next Milestone 1 package.
+        <p style={{ color: "#64748b" }}>
+          This page will be built next.
         </p>
       </div>
     </main>
@@ -47,10 +44,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Welcome />} />
 
-        <Route
-          path="/login"
-          element={<PlaceholderPage title="SkyVault Login" />}
-        />
+        <Route path="/login" element={<Login />} />
 
         <Route
           path="/register"
