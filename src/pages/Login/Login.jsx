@@ -43,7 +43,8 @@ function Login() {
     if (!formData.password) {
       nextErrors.password = "Please enter your password.";
     } else if (formData.password.length < 6) {
-      nextErrors.password = "Password must contain at least 6 characters.";
+      nextErrors.password =
+        "Password must contain at least 6 characters.";
     }
 
     return nextErrors;
@@ -61,16 +62,25 @@ function Login() {
     }
 
     setErrors({});
+
     setFormMessage(
       "Login form is ready. Real account authentication will be connected with the SkyVault backend."
     );
   };
 
   return (
-    <AuthLayout>
+    <AuthLayout
+      eyebrow="🌌 Your digital universe"
+      heading="Welcome back to a"
+      highlightedText="calmer workspace."
+      description="Return to the place where your personal files and study life stay organized without the clutter."
+      footerText="Personal Vault + Study Spaces"
+    >
       <div className="login-card">
         <div className="login-heading">
-          <span className="login-kicker">Welcome back</span>
+          <span className="login-kicker">
+            Welcome back
+          </span>
 
           <h2>Sign in to SkyVault</h2>
 
@@ -79,16 +89,25 @@ function Login() {
           </p>
         </div>
 
-        <form className="login-form" onSubmit={handleSubmit} noValidate>
+        <form
+          className="login-form"
+          onSubmit={handleSubmit}
+          noValidate
+        >
           <div className="login-field">
-            <label htmlFor="email">Email address</label>
+            <label htmlFor="email">
+              Email address
+            </label>
 
             <div
               className={`login-input-wrapper ${
                 errors.email ? "login-input-error" : ""
               }`}
             >
-              <span className="login-input-icon" aria-hidden="true">
+              <span
+                className="login-input-icon"
+                aria-hidden="true"
+              >
                 @
               </span>
 
@@ -102,13 +121,18 @@ function Login() {
                 autoComplete="email"
                 aria-invalid={Boolean(errors.email)}
                 aria-describedby={
-                  errors.email ? "email-error" : undefined
+                  errors.email
+                    ? "email-error"
+                    : undefined
                 }
               />
             </div>
 
             {errors.email && (
-              <p className="login-error-message" id="email-error">
+              <p
+                className="login-error-message"
+                id="email-error"
+              >
                 {errors.email}
               </p>
             )}
@@ -134,7 +158,11 @@ function Login() {
                 onChange={handleChange}
               />
 
-              <span className="remember-checkmark" aria-hidden="true"></span>
+              <span
+                className="remember-checkmark"
+                aria-hidden="true"
+              ></span>
+
               <span>Remember me</span>
             </label>
 
@@ -151,14 +179,21 @@ function Login() {
             </button>
           </div>
 
-          <button type="submit" className="login-submit-button">
+          <button
+            type="submit"
+            className="login-submit-button"
+          >
             <span>Sign In</span>
             <span aria-hidden="true">→</span>
           </button>
 
           {formMessage && (
-            <div className="login-form-message" role="status">
+            <div
+              className="login-form-message"
+              role="status"
+            >
               <span aria-hidden="true">ℹ</span>
+
               <p>{formMessage}</p>
             </div>
           )}
@@ -166,11 +201,16 @@ function Login() {
 
         <div className="login-divider">
           <span></span>
+
           <p>New to SkyVault?</p>
+
           <span></span>
         </div>
 
-        <Link to="/register" className="create-account-link">
+        <Link
+          to="/register"
+          className="create-account-link"
+        >
           Create your free account
         </Link>
 

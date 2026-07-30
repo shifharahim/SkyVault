@@ -6,21 +6,31 @@ const authFeatures = [
   {
     icon: "🔐",
     title: "Personal Vault",
-    description: "Keep private files and personal resources in one clear space.",
+    description:
+      "Keep private files and personal resources in one clear space.",
   },
   {
     icon: "📚",
     title: "Study Spaces",
-    description: "Organize subjects, assignments, papers, and lecture resources.",
+    description:
+      "Organize subjects, assignments, papers, and lecture resources.",
   },
   {
     icon: "📝",
     title: "Quick Notes",
-    description: "Capture revision points and ideas without creating a file.",
+    description:
+      "Capture revision points and ideas without creating a file.",
   },
 ];
 
-function AuthLayout({ children }) {
+function AuthLayout({
+  children,
+  eyebrow = "🌌 Your digital universe",
+  heading = "Welcome back to a",
+  highlightedText = "calmer workspace.",
+  description = "Return to the place where your personal files and study life stay organized without the clutter.",
+  footerText = "Personal Vault + Study Spaces",
+}) {
   return (
     <div className="auth-layout">
       <section className="auth-showcase">
@@ -41,18 +51,15 @@ function AuthLayout({ children }) {
 
           <div className="auth-showcase-copy">
             <span className="auth-eyebrow">
-              🌌 Your digital universe
+              {eyebrow}
             </span>
 
             <h1>
-              Welcome back to a
-              <span> calmer workspace.</span>
+              {heading}{" "}
+              <span>{highlightedText}</span>
             </h1>
 
-            <p>
-              Return to the place where your personal files and study life stay
-              organized without the clutter.
-            </p>
+            <p>{description}</p>
           </div>
 
           <div className="auth-feature-list">
@@ -68,7 +75,7 @@ function AuthLayout({ children }) {
 
           <div className="auth-showcase-footer">
             <span className="auth-live-dot"></span>
-            Personal Vault + Study Spaces
+            {footerText}
           </div>
         </div>
       </section>

@@ -7,36 +7,7 @@ import {
 
 import Welcome from "./pages/Welcome/Welcome";
 import Login from "./pages/Login/Login";
-
-function PlaceholderPage({ title }) {
-  return (
-    <main
-      style={{
-        minHeight: "100vh",
-        display: "grid",
-        placeItems: "center",
-        padding: "24px",
-        background: "#f8faff",
-        fontFamily: "Inter, sans-serif",
-      }}
-    >
-      <div style={{ textAlign: "center" }}>
-        <h1
-          style={{
-            color: "#1e1b4b",
-            marginBottom: "12px",
-          }}
-        >
-          {title}
-        </h1>
-
-        <p style={{ color: "#64748b" }}>
-          This page will be built next.
-        </p>
-      </div>
-    </main>
-  );
-}
+import Register from "./pages/Register/Register";
 
 function App() {
   return (
@@ -46,12 +17,7 @@ function App() {
 
         <Route path="/login" element={<Login />} />
 
-        <Route
-          path="/register"
-          element={
-            <PlaceholderPage title="Create Your SkyVault Account" />
-          }
-        />
+        <Route path="/register" element={<Register />} />
 
         <Route
           path="*"
